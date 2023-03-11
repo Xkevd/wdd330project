@@ -1,0 +1,66 @@
+[{
+    "id": "eve00001",
+    "name": "Imagine Dragons",
+    "location": "Antel Arena",
+    "description": "Imagine Dragons comes to Uruguay!",
+    "date": "07/04/2023",
+    "category": "Music",
+    "available": "30000",
+    "price": "200",
+    "image": ""
+  },
+  {
+    "id": "eve00002",
+    "name": "Chano",
+    "location": "Teatro de Verano",
+    "description": "Once more Chano visits Uruguay!",
+    "date": "25/03/2023",
+    "category": "Music",
+    "available": "5000",
+    "price": "99",
+    "image": ""
+  },
+  {
+    "id": "eve00003",
+    "name": "Stand up (Various artists)",
+    "location": "Movie Center - Montevideo Shopping",
+    "description": "",
+    "date": "17/04/2023",
+    "category": "Comedy",
+    "available": "500",
+    "price": "40",
+    "image": ""
+  },
+  {
+    "id": "eve00004",
+    "name": "Stand up (Various artists) - 2nd show",
+    "location": "Movie Center - Montevideo Shopping",
+    "description": "",
+    "date": "19/04/2023",
+    "category": "Comedy",
+    "available": "500",
+    "price": "40",
+    "image": ""
+  },
+  {
+    "id": "eve00004",
+    "name": "Stand up (Various artists) - 2nd show",
+    "location": "Movie Center - Montevideo Shopping",
+    "description": "",
+    "date": "19/04/2023",
+    "category": "Comedy",
+    "available": "500",
+    "price": "40",
+    "image": ""
+  },
+  {
+    "id": {},
+    "name": {},
+    "description": {},
+    "date": {},
+    "time": {},
+    "category": {},
+    "available": {},
+    "price": {}
+  }
+]
