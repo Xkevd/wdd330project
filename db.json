@@ -1,12 +1,8 @@
 [{
     "id": "eve00001",
-    "name": "Imagine Dragons",
-    "location": "Antel Arena",
-    "description": "Imagine Dragons comes to Uruguay!",
-    "date": "07/04/2023",
+    "eventInfo": {"name": "Imagine Dragons", "description": "Imagine Dragons comes to Uruguay!",
+    "date": "07/04/2023", "location": "Antel Arena", "price": "200"},    
     "category": "Music",
-    "available": "30000",
-    "price": "200",
     "image": ""
   },
   {
