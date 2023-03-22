@@ -1,6 +1,6 @@
 function eventCardTemplate(event){
   return `<li class="product-card">
-  <a href="../event-pages/index.html?product=${event.id}">
+  <a href="../event-pages/index.html?event=${event.id}">
   <img
   src="${event.image}"
   alt="Image of ${event.name}"
@@ -12,7 +12,7 @@ function eventCardTemplate(event){
 </li>`
 }
 
-async function convertToJson(res){
+export async function convertToJson(res){
  const data = await res.json();
     if (res.ok) {
       return data;

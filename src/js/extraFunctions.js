@@ -1,3 +1,0 @@
-function getByCategory(dataSource, category){
-  
-}
