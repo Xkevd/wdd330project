@@ -103,6 +103,10 @@ button {
   text-align: center;
 }
 
+.cart a {
+  text-decoration: none;
+}
+
 .cart svg {
   width: 25px;
 }
@@ -202,6 +206,33 @@ button {
   grid-column: 3;
 }
 
+.delete-item-cart{
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hide{
+  display: none;
+}
+
+#category{
+  display: grid;
+  grid-template-columns: repeat(4, 180px);
+  grid-gap: 3em;
+  justify-content: center;
+}
+
+#cart-count{
+  font-size: 12px;
+  background: #f0a868;
+  border-radius: 10px;
+  color: #303030;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px; 
+  
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;
@@ -219,4 +250,17 @@ button {
 footer {
   font-size: var(--small-font);
   padding: 1em;
+}
+
+/* alert styles */
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em;
+  background-color: var(--primary-color);
+  border: 1px solid darkorange;
+}
+.alert > p {
+  margin: 0;
 }
