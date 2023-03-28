@@ -19,9 +19,14 @@
     <nav></nav>
     </header>
     <main>
-      <div id="searching-area"><span>&#128269;</span><input type="text" placeholder="Search..."></div>
+      <div id="searching-area">
+        <form id="search-form" >
+          <input id="search-button" type="submit" value="&#128269;"><input name="searchingBox" id="searching-box" type="text" placeholder="Search...">
+        </form>
+      </div>
       <div id="category-selector">
         <select name="selectCategory" id="selectCategory" form="selectCategory">
+          <option value="All">All</option>
           <option value="Music">Music</option>
           <option value="Comedy">Comedy</option>
           <option value="Sports">Sports</option>
