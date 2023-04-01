@@ -1,9 +1,9 @@
-import EventsList from "./EventsList.mjs";
+import EventsList, { renderLike } from "./EventsList.mjs";
+//import { renderLike } from "./EventsList.mjs";
 
 
 const categorySelection = document.querySelector("#selectCategory");
 const searchForm = document.querySelector("form");
-//const searchingBox = document.querySelector("#searchingBox");
 
 let category = categorySelection.value;
 const dataSource = "/json/eventsdb.json"
@@ -18,7 +18,6 @@ categorySelection.addEventListener("change", function reRender(){
   elementList.init()});
 
 searchForm.addEventListener("submit", showSearch);
-
 function showSearch(event){
   event.preventDefault()
   const form = event.target;
@@ -27,4 +26,5 @@ function showSearch(event){
   const searchValue = search.value;
   elementList.runSearch(searchValue);
 }
+
 

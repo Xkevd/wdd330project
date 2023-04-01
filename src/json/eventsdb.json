@@ -5,7 +5,7 @@
     "location": "Antel Arena", 
     "price": "200",   
     "category": "Music",
-    "image": ""
+    "image": "../images/imagine-dragons.jpg"
   },
   {
     "id": "eve00002",
@@ -14,9 +14,8 @@
     "description": "Once more Chano visits Uruguay!",
     "date": "25/03/2023",
     "category": "Music",
-    "available": "5000",
     "price": "99",
-    "image": ""
+    "image": "../images/chano.jpeg"
   },
   {
     "id": "eve00003",
@@ -25,9 +24,8 @@
     "description": "",
     "date": "17/04/2023",
     "category": "Comedy",
-    "available": "500",
     "price": "40",
-    "image": ""
+    "image": "../images/stand-up.png"
   },
   {
     "id": "eve00004",
@@ -36,29 +34,77 @@
     "description": "",
     "date": "19/04/2023",
     "category": "Comedy",
-    "available": "500",
     "price": "40",
-    "image": ""
+    "image": "../images/stand-up.png"
   },
   {
     "id": "eve00004",
-    "name": "Stand up (Various artists) - 2nd show",
+    "name": "Stand up (Various artists) - 3rd show",
     "location": "Movie Center - Montevideo Shopping",
     "description": "",
-    "date": "19/04/2023",
+    "date": "20/04/2023",
     "category": "Comedy",
-    "available": "500",
     "price": "40",
-    "image": ""
+    "image": "../images/stand-up.png"
   },
   {
     "id": "eve00005",
     "name": "Montevideo Marathon 2023",
-    "description": "SRace not suitable for children under 18 years of age",
+    "location": "Parque Rodó",
+    "description": "Race not suitable for children under 18 years of age",
     "date": "23/5/2023",
     "category": "Sports",
-    "available": "1000",
     "price": "10",
-    "image": ""
+    "image": "../images/marathon.jpg"
+  },
+  {
+    "id": "eve00006",
+    "name": "Uruguay vs. Mexico",
+    "location": "Estadio Centenario",
+    "description": "Don't miss the opportunity to watch Uruguay vs. Mexico at the Estadio Centenario.",
+    "date": "6/6/2023",
+    "category": "Sports",
+    "price": "60",
+    "image": "../images/uruvsmex.jpg"
+  },
+  {
+    "id": "eve00007",
+    "name": "No te va gustar",
+    "location": "Antel Arena",
+    "description": "NTVG is once again at the Antel Arena presenting their new album!",
+    "date": "20/7/2023",
+    "category": "Music",
+    "price": "40",
+    "image": "../images/ntvg.jpg"
+  },
+  {
+    "id": "eve00009",
+    "name": "No te va gustar - 2nd show",
+    "location": "Antel Arena",
+    "description": "NTVG is once again at the Antel Arena presenting their new album!",
+    "date": "27/7/2023",
+    "category": "Music",
+    "price": "35",
+    "image": "../images/ntvg.jpg"
+  },
+  {
+    "id": "eve00010",
+    "name": "Peñarol vs. Nacional",
+    "location": "'Campeon del Siglo' Stadium",
+    "description": "Don't miss the opportunity to watch Peñarol vs. Nacional!",
+    "date": "14/4/2023",
+    "category": "Sports",
+    "price": "30",
+    "image": "../images/penvsnac.png"
+  },
+  {
+    "id": "eve00011",
+    "name": "Carlos Vives",
+    "location": "Antel Arena",
+    "description": "For the first time, Carlos Vives visits Uruguay.",
+    "date": "4/6/2023",
+    "category": "Music",
+    "price": "30",
+    "image": "../images/vives.jpeg"
   }
 ]

@@ -1,15 +1,26 @@
+import { setLocalStorage, getLocalStorage, findById } from "./extraFunctions.mjs";
+
 function eventCardTemplate(event){
-  return `<li class="product-card">
-  <a href="../event-pages/index.html?event=${event.id}">
+  return `
+  <li class="product-card">
+  <a class="like-button" href="#=" id="${event.id}like">&#9825;</a>  
+  <a id="event-info" href="../event-pages/index.html?event=${event.id}">
   <img
   src="${event.image}"
   alt="Image of ${event.name}"
   />
-  <h2 class="event-card">${event.name}</h2>
-  <h3 class="event-card">${event.location}</h3>
-  <h3 class="event-card">$${event.price}</h3>
-  <p class="event-card">${event.category}</p></a>
+  <h2 >${event.name}</h2>
+  <h3 class="event-text">${event.location}</h3>
+  <h4>$${event.price}</h4>
+  <p  class="event-text right">${event.category}</p></a>
 </li>`
+}
+
+export function renderLike(elementId){
+  //console.log(button);
+  const element = findById(elementId);
+  setLocalStorage("liked-events", element)
+
 }
 
 export async function convertToJson(res){
@@ -21,7 +32,6 @@ export async function convertToJson(res){
     }
   
 }
-
 
 export default class EventsList{
   constructor(category, dataSource, listElement){
