@@ -1,4 +1,5 @@
 import {convertToJson} from "./EventsList.mjs"
+import { getLocalStorage, setLocalStorage } from "./extraFunctions.mjs";
 export default class EventDetails{
   constructor(eventId, dataSource) {
     this.eventId = eventId;
@@ -9,7 +10,8 @@ export default class EventDetails{
     this.eventOpen = await this.findById(this.eventId);
     this.eventOpen = this.eventOpen[0];
     this.renderEventDetails("#event-details");
-    //document.getElementById("addToCart").addEventListener("click", this.addtoCart.bind(this));
+    document.getElementById("buyEvent").addEventListener("click", this.addtoCart.bind(this));
+    
   }
   async findById(id){
     const readJSON = await fetch("/json/eventsdb.json");
@@ -18,7 +20,6 @@ export default class EventDetails{
     console.log(result)
     return result;
   }
-
   renderEventDetails(htmlElement) {
     const element = document.querySelector(htmlElement);
     element.insertAdjacentHTML("afterBegin", `<section class="event-details">
@@ -28,11 +29,21 @@ export default class EventDetails{
       />
       <h2>${this.eventOpen.name}</h2>
       <h3>${this.eventOpen.price}</h3>
-
+      <h4>${this.eventOpen.location}</h4>
       <p>
       ${this.eventOpen.description}
       </p>
+      <a id="buyEvent" href="">Buy</a>
       </section>`);
 }
+    addtoCart() {
+      let cartContents = getLocalStorage("cart");
+      if(!cartContents) {
+        cartContents = [];
+      }
+      cartContents.push(this.eventOpen);
+      setLocalStorage("cart", cartContents);
+      alert("Event added to cart!");
+    }
 
 }

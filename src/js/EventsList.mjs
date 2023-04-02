@@ -3,7 +3,7 @@ import { setLocalStorage, getLocalStorage, findById } from "./extraFunctions.mjs
 function eventCardTemplate(event){
   return `
   <li class="product-card">
-  <a class="like-button" href="#=" id="${event.id}like">&#9825;</a>  
+    
   <a id="event-info" href="../event-pages/index.html?event=${event.id}">
   <img
   src="${event.image}"
@@ -83,19 +83,4 @@ export default class EventsList{
     htmlStrings = htmlStrings.join("");
     this.listElement.innerHTML = htmlStrings;
   }
-
 }
-
-// async function filterByCategory(category){
-//   const readJSON = await fetch("/json/eventsdb.json");
-//   const convJSON = await convertToJson(readJSON);
-//   //console.log(convJSON);
-//   const result = convJSON .filter(obj => obj.category == category);
-//   //console.log(result);
-//   return result;
-//}
-
-// function renderEventsList(list) {
-//   const htmlStrings =  list.map(eventCardTemplate);
-//   this.listElement.insertAdjacentHTML("afterbegin", htmlStrings.join(""));
-// }
