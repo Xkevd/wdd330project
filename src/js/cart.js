@@ -2,6 +2,7 @@ import { getLocalStorage, setLocalStorage } from "./extraFunctions.mjs";
 
 function renderCartContents() {
   const cartEvents = getLocalStorage("cart");
+  console.log(cartEvents)
   const htmlItems = cartEvents.map((event) => cartItemTemplate(event));
   let totalValue = 0;
   cartEvents.map((item) => totalValue += item.FinalPrice);
@@ -20,7 +21,7 @@ function renderCartContents() {
 function cartItemTemplate(elem) {
   if(elem != null){
   const newEvent = `<li class="divider">
-  <a id="${elem.id}" class="delete-event">&#215;</a>
+  <a id="${elem.id}" class="delete-event" href="#">&#215;</a>
   <div class="cart-card divider">
   <a href="#" class="cart-card__image">
     <imgsrc="${elem.image}" alt="${elem.name}"/>
@@ -31,25 +32,21 @@ function cartItemTemplate(elem) {
   <p class="cart-card__price">$${elem.price}</p>
   </div>
 </li>`;
-const total = document.querySelector(".cart-total").innerHTML += elem.FinalPrice; 
-return newItem;
+/*const total = document.querySelector(".cart-total").innerHTML += elem.FinalPrice; */
+return newEvent;
   }
-  return ""
+  /*return ""*/
   
 }
 
 
 
 function removeFromCartByIndex(elemId, localStorage){
-  //console.log(elemId)
   let source = getLocalStorage(localStorage)
   const elementIndex = source.findIndex(e => e.Id === elemId);
-  //console.log(elementIndex);
   source.splice(elementIndex, 1)
-  //console.log(source)
   setLocalStorage(localStorage, source)
   renderCartContents()
-  
 }
 
 renderCartContents();
