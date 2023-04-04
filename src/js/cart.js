@@ -5,7 +5,7 @@ function renderCartContents() {
   console.log(cartEvents)
   const htmlItems = cartEvents.map((event) => cartItemTemplate(event));
   let totalValue = 0;
-  cartEvents.map((item) => totalValue += item.FinalPrice);
+  cartEvents.map((item) => totalValue += parseInt(item.price));
   document.querySelector(".event-list").innerHTML = htmlItems.join("");
   document.querySelector(".cart-total").innerHTML = `Total: $${totalValue}`;
   //To remove from cart
@@ -21,7 +21,7 @@ function renderCartContents() {
 function cartItemTemplate(elem) {
   if(elem != null){
   const newEvent = `<li class="divider">
-  <a id="${elem.id}" class="delete-event" href="#">&#215;</a>
+  <a id="${elem.id}" class="delete-event">&#215;</a>
   <div class="cart-card divider">
   <a href="#" class="cart-card__image">
     <imgsrc="${elem.image}" alt="${elem.name}"/>
@@ -35,7 +35,6 @@ function cartItemTemplate(elem) {
 /*const total = document.querySelector(".cart-total").innerHTML += elem.FinalPrice; */
 return newEvent;
   }
-  /*return ""*/
   
 }
 

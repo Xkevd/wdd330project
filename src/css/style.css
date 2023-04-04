@@ -6,7 +6,8 @@ h1, h2, h3, h4, p{
   text-align: right;
 }
 /*Header*/
-#header-primary{
+#header-section{
+margin-bottom: 2rem;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -26,11 +27,14 @@ align-items: center;
   min-width: fit-content;
   height: 3rem;
   width: 12vw;
-  background-color: #e5e5e5;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#nav-bar ul li:hover{
+  background-color: #e5e5e5;
+  transition: background-color 0.5s;
 }
 #nav-bar ul li a{
   text-decoration: none;
@@ -42,31 +46,31 @@ align-items: center;
 }
 
 /*Logo*/
-#logo-header{
-  position: relative;
-}
 #logo-header img{
-  width: 20rem;
   filter: grayscale(0.5);
   filter: blur(0.4);
+  height: 2rem;
+  width: auto;
+  margin-right: 1rem;
 }
-#logo-header div{
+#logo-header{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: -1.5rem;
-  padding-left: 1.5rem ;
-  width: 20rem;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  align-items: center;
   margin-left: 1rem;
 }
-#logo-header div h1{
+#logo-header h1{
   font-size: 1.8rem;
 }
+#header-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+}
+#cart-img{
+  width: 2rem;
+  margin-right: 1rem;
+}
 /*Search and Category*/
 #searching-area, #category-selector{
   margin-left: 5rem;
@@ -106,10 +110,12 @@ align-items: center;
   display: flex;
   /*grid-template-columns: 1fr 1fr 1fr;*/
   flex-direction: row;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5rem;
+  margin: 5rem;
+  margin-top: 1rem;
+  background-color: #14213d85;
+  border-radius: 8px;
 }
 .product-card{
   /*border: 1px solid black;*/
@@ -122,6 +128,7 @@ align-items: center;
   justify-content: space-between;
   filter: grayscale(0.5);
   width: min-content;
+  height: auto;
 }
 #event-info{
   text-decoration: none;
@@ -155,12 +162,27 @@ align-items: center;
 
 /*Event display*/
 .event-details{
-
+  margin-top: 1rem;
+  background-color: #14213d33;
+  border-radius: 8px;
+  padding: 1rem;
 }
-.event-details img{
-  width: 15vw;
-  height: 15vw;
+#event-details img{
+  width: 20vw;
+  height: 20vw;
   object-fit: cover;
+  border-radius: 8px;
+}
+#buyEvent{
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+#event-details{
+  padding: 2rem;
 }
 
 

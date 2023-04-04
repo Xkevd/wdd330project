@@ -24,4 +24,14 @@ export function getParam(param) {
     localStorage.setItem(key, JSON.stringify(data));
   }
 
-  
+  async function loadTemplate(path){
+    let response = await fetch(path);
+    let result = await response.text();
+    return result
+  }
+  export async function loadHeaderAndFooter(){
+    let header = await loadTemplate("../snippets/header.html");
+    let footer = await loadTemplate("../snippets/footer.html");
+    document.querySelector("#header-section").insertAdjacentHTML("afterbegin", header);
+    document.querySelector("#footer-section").insertAdjacentHTML("afterbegin", footer);
+  }

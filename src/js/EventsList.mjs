@@ -1,4 +1,3 @@
-import { setLocalStorage, getLocalStorage, findById } from "./extraFunctions.mjs";
 
 function eventCardTemplate(event){
   return `
@@ -14,13 +13,6 @@ function eventCardTemplate(event){
   <h4>$${event.price}</h4>
   <p  class="event-text right">${event.category}</p></a>
 </li>`
-}
-
-export function renderLike(elementId){
-  //console.log(button);
-  const element = findById(elementId);
-  setLocalStorage("liked-events", element)
-
 }
 
 export async function convertToJson(res){
@@ -67,13 +59,11 @@ export default class EventsList{
         return false;
       };
     });
-    //console.log(listOfMatches);
     return listOfMatches;
   };
   
    async runSearch(value){
     const preSearch = await this.filterByCategory(this.category);
-    //console.log(preSearch);
     const searchList = this.search(value, preSearch);
     console.log(searchList);
     this.renderEventsList(searchList);

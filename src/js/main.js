@@ -1,5 +1,6 @@
-import EventsList from "./EventsList.mjs";
+import { loadHeaderAndFooter } from "./extraFunctions.mjs";
 
+loadHeaderAndFooter();
 
 
 

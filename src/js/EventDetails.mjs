@@ -22,11 +22,13 @@ export default class EventDetails{
   }
   renderEventDetails(htmlElement) {
     const element = document.querySelector(htmlElement);
-    element.insertAdjacentHTML("afterBegin", `<section class="event-details">
-      <img
-        src="${this.eventOpen.image}"
-        alt="${this.eventOpen.name}"
-      />
+    element.insertAdjacentHTML("afterBegin", `
+    <img
+    src="${this.eventOpen.image}"
+    alt="${this.eventOpen.name}"
+  />
+      <section class="event-details">
+      
       <h2>${this.eventOpen.name}</h2>
       <h3>${this.eventOpen.price}</h3>
       <h4>${this.eventOpen.location}</h4>

@@ -1,6 +1,4 @@
-import EventsList, { renderLike } from "./EventsList.mjs";
-//import { renderLike } from "./EventsList.mjs";
-
+import EventsList from "./EventsList.mjs";
 
 const categorySelection = document.querySelector("#selectCategory");
 const searchForm = document.querySelector("form");
