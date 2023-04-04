@@ -20,16 +20,14 @@ function renderCartContents() {
 
 function cartItemTemplate(elem) {
   if(elem != null){
-  const newEvent = `<li class="divider">
+  const newEvent = `<li class="cart-event">
   <a id="${elem.id}" class="delete-event">&#215;</a>
-  <div class="cart-card divider">
-  <a href="#" class="cart-card__image">
-    <imgsrc="${elem.image}" alt="${elem.name}"/>
-  </a>
-  <a href="#">
-    <h2 class="card__name">${elem.name}</h2>
-  </a>
+  <div class="cart-card">
+  <a href="../event-pages/index.html?event=${elem.id}&category=${elem.category}">
+    <img src="${elem.image}" alt="${elem.name}"/>
+  <h2 class="card__name">${elem.name}</h2>
   <p class="cart-card__price">$${elem.price}</p>
+  </a>
   </div>
 </li>`;
 /*const total = document.querySelector(".cart-total").innerHTML += elem.FinalPrice; */
