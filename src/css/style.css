@@ -9,7 +9,7 @@ h1, h2, h3, h4, p{
 #header-section{
 margin-bottom: 2rem;
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 }
 #nav-bar{
@@ -162,10 +162,22 @@ align-items: center;
 
 /*Event display*/
 .event-details{
+  display: flex;
+  flex-direction: column;
   margin-top: 1rem;
   background-color: #14213d33;
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
+  margin-left: 1rem;
+  max-height: 100%;
+}
+.event-details h2{
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.event-details h4{
+  text-align: right;
+  font-size: 0.9rem;
 }
 #event-details img{
   width: 20vw;
@@ -177,13 +189,45 @@ align-items: center;
   display: inline-block;
   padding: 0.5rem 1.5rem;
   border-radius: 8px;
-  border: 1px solid black;
+  background-color: #fca311;
   text-decoration: none;
   font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: fit-content;
+  align-self: flex-end;
 }
 #event-details{
   padding: 2rem;
+  display: flex;
+  align-items: flex-end;
+  height: 20vw;
+  width: 100%;
 }
+/*Other events display*/
+#other-events .product-card a img{
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+#other-events .product-card a p, #other-events .product-card a h3{
+  display: none;
+}
+#other-events .product-card #event-info{
+  display: flex;
+  flex-direction: row;
+}
+#other-events .product-card a h2{
+  font-size: 0.8rem;
+}
+#other-events .product-card a h4{
+  font-size: 0.5;
+  color: red;
+}
+#other-events .product-card a{
+  padding: 0;
+}
+
 
 
 @media screen and (min-width: 500px) {

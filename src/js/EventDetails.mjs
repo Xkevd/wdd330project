@@ -30,12 +30,13 @@ export default class EventDetails{
       <section class="event-details">
       
       <h2>${this.eventOpen.name}</h2>
-      <h3>${this.eventOpen.price}</h3>
-      <h4>${this.eventOpen.location}</h4>
       <p>
       ${this.eventOpen.description}
       </p>
+      <h3>$${this.eventOpen.price}</h3>
+      <h4>&#128205;${this.eventOpen.location}</h4>
       <a id="buyEvent" href="">Buy</a>
+      
       </section>`);
 }
     addtoCart() {
@@ -49,3 +50,4 @@ export default class EventDetails{
     }
 
 }
+

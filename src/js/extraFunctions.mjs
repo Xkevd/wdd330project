@@ -12,7 +12,7 @@ export function getParam(param) {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const event = urlParams.get(param);
-    console.log(event);
+    /*console.log(event);*/
     return event
   }
 

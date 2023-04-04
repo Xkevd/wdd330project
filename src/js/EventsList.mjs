@@ -3,7 +3,7 @@ function eventCardTemplate(event){
   return `
   <li class="product-card">
     
-  <a id="event-info" href="../event-pages/index.html?event=${event.id}">
+  <a id="event-info" href="../event-pages/index.html?event=${event.id}&category=${event.category}">
   <img
   src="${event.image}"
   alt="Image of ${event.name}"
@@ -72,5 +72,18 @@ export default class EventsList{
     let htmlStrings =  list.map(eventCardTemplate);
     htmlStrings = htmlStrings.join("");
     this.listElement.innerHTML = htmlStrings;
+  }
+  async renderOtherEvents(){
+    const list = await this.filterByCategory(this.category);
+    console.log(list);
+    if (list.length > 3){
+      let htmlStrings =  list.slice(0, 3).map(eventCardTemplate);
+      htmlStrings = htmlStrings.join("");
+      this.listElement.innerHTML = htmlStrings;
+    }else{
+      let htmlStrings =  list.map(eventCardTemplate,);
+      htmlStrings = htmlStrings.join("");
+      this.listElement.innerHTML = htmlStrings;
+    }
   }
 }
