@@ -6,7 +6,7 @@ function renderCartContents() {
   /*console.log(cartEvents)*/
   const htmlItems = cartEvents.map((event) => cartItemTemplate(event));
   let totalValue = 0;
-  cartEvents.map((item) => totalValue += parseInt(item.price));
+  cartEvents.map((item) => totalValue += parseInt(item.price) * parseInt(item.quantity));
   document.querySelector(".event-list").innerHTML = htmlItems.join("");
   document.querySelector(".cart-total").innerHTML = `Your total is: $${totalValue}`;
   //To remove from cart
