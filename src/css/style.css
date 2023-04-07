@@ -201,6 +201,17 @@ align-items: center;
   object-fit: cover;
   border-radius: 8px;
 }
+#amount-tickets{
+  text-align: right;
+  margin-top: 1rem;
+  color: #14213d;
+  font-size: 0.6;
+}
+#quantity{
+  width: 3rem;
+  justify-self: right;
+  align-self: flex-end;
+}
 #buyEvent{
   display: inline-block;
   padding: 0.5rem 1.5rem;
@@ -221,6 +232,7 @@ align-items: center;
   height: 20vw;
   width: 100%;
 }
+
 /*Other events display*/
 #other-events .product-card a img{
   width: 2rem;
@@ -259,6 +271,7 @@ align-items: center;
 .other-events h2{
   text-align: center;
 }
+
 /*Cart*/
 #main-cart{
   display: grid;
@@ -282,8 +295,7 @@ align-items: center;
   list-style: none;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  
+  width: 100%; 
   margin-bottom: 1rem;
   background-color: #e5e5e581;
   padding: 0.5rem;
@@ -309,6 +321,12 @@ align-items: center;
   padding-left: 1rem;
   padding-bottom: 1rem;
 }
+.cart-info p{
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-align: right;
+}
 .cart-info a img{
   width: 10vw;
   height: 10vw;
@@ -319,6 +337,13 @@ align-items: center;
   top: 0;
   height: fit-content;
 }
+#total-div p{
+  text-align: center;
+  margin-top: 1rem;
+  color: red;
+  font-size: 0.8rem;
+  padding: 2rem;
+}
 #checkout-button{
   border-radius: 8px;
   border: none;
@@ -326,6 +351,34 @@ align-items: center;
   padding: 1rem;
   margin-top: 1rem;
   font-weight: bold;
+}
+
+/*Home page*/
+#home-div{
+  display: flex;
+  flex-direction: column;
+}
+#home-div h1{
+  text-align: center;
+  font-size: 3rem;
+  width: fit-content;
+  padding: 0 1rem;
+  margin: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+#home-div a{
+  display: inline-block;
+  margin: auto;
+  padding: 1rem;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fca311;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 

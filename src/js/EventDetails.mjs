@@ -36,6 +36,7 @@ export default class EventDetails{
       <h3>$${this.eventOpen.price}</h3>
       <h4>&#128205;${this.eventOpen.location}</h4>
       <h4>${this.eventOpen.date}</h4>
+      <p id="amount-tickets" >Amount</p>
       <input type="number" id="quantity" value="1" name="quantity" placeholder="1" min="1" max="5">
       <a id="buyEvent" href="">Buy</a>      
       </section>`);

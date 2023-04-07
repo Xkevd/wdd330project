@@ -61,11 +61,10 @@ export default class EventsList{
     });
     return listOfMatches;
   };
-  
    async runSearch(value){
     const preSearch = await this.filterByCategory(this.category);
     const searchList = this.search(value, preSearch);
-    console.log(searchList);
+    //console.log(searchList);
     this.renderEventsList(searchList);
   }
   renderEventsList(list) {

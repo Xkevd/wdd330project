@@ -25,4 +25,3 @@ function showSearch(event){
   elementList.runSearch(searchValue);
 }
 
-
