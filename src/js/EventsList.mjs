@@ -75,7 +75,6 @@ export default class EventsList{
   }
   async renderOtherEvents(){
     const list = await this.filterByCategory(this.category);
-    console.log(list);
     if (list.length > 3){
       let shuffledList = list.sort(()=>0.5 - Math.random());
       let htmlStrings =  shuffledList.slice(0, 3).map(eventCardTemplate);

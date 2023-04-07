@@ -259,7 +259,74 @@ align-items: center;
 .other-events h2{
   text-align: center;
 }
-
+/*Cart*/
+#main-cart{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 2rem;
+}
+#main-cart div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.event-list{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 0;
+  width: fit-content;
+}
+.cart-event{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  margin-bottom: 1rem;
+  background-color: #e5e5e581;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.cart-event:hover{
+  box-shadow: 1px 1px 5px 5px #14213d33;
+  background-color: #e5e5e5e1;
+}
+.delete-event{
+  font-size: 1.5rem;
+  color: red;
+  font-weight: 600;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.cart-info{
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.cart-info a img{
+  width: 10vw;
+  height: 10vw;
+  object-fit: cover;
+}
+#total-div{
+  position: sticky;
+  top: 0;
+  height: fit-content;
+}
+#checkout-button{
+  border-radius: 8px;
+  border: none;
+  background-color: #fca311;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
 
 
 @media screen and (min-width: 500px) {

@@ -1,5 +1,6 @@
 import {convertToJson} from "./EventsList.mjs"
 import { getLocalStorage, setLocalStorage } from "./extraFunctions.mjs";
+
 export default class EventDetails{
   constructor(eventId, dataSource) {
     this.eventId = eventId;
@@ -17,7 +18,6 @@ export default class EventDetails{
     const readJSON = await fetch("/json/eventsdb.json");
     const convJSON = await convertToJson(readJSON);
     const result = convJSON.filter(obj => obj.id == id);
-    console.log(result)
     return result;
   }
   renderEventDetails(htmlElement) {
@@ -35,18 +35,34 @@ export default class EventDetails{
       </p>
       <h3>$${this.eventOpen.price}</h3>
       <h4>&#128205;${this.eventOpen.location}</h4>
-      <a id="buyEvent" href="">Buy</a>
-      
+      <h4>${this.eventOpen.date}</h4>
+      <input type="number" id="quantity" value="1" name="quantity" placeholder="1" min="1" max="5">
+      <a id="buyEvent" href="">Buy</a>      
       </section>`);
 }
     addtoCart() {
       let cartContents = getLocalStorage("cart");
+      const quantity = parseInt(document.querySelector("#quantity").value);
+      this.eventOpen.quantity = quantity;
       if(!cartContents) {
         cartContents = [];
       }
-      cartContents.push(this.eventOpen);
+      let duplicatedEvent = cartContents.filter(e => e.id == this.eventOpen.id);
+      console.log(duplicatedEvent)
+      if(duplicatedEvent.length == 0){
+        cartContents.push(this.eventOpen);
+      }else{
+        this.eventOpen.quantity += parseInt(duplicatedEvent[0].quantity);
+        /*Remove from cart by index*/
+        let source = getLocalStorage("cart")
+        const elementIndex = source.findIndex(e => e.id == this.eventOpen.id);
+        source.splice(elementIndex, 1);
+        setLocalStorage("cart", source);
+        cartContents = getLocalStorage("cart");
+        cartContents.push(this.eventOpen);
+      }
       setLocalStorage("cart", cartContents);
-      alert("Event added to cart!");
+      /*alert("Event added to cart!");*/
     }
 
 }
