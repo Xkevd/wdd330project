@@ -9,5 +9,6 @@ const dataSource = "/json/eventsdb.json";
 const eventDetails = new EventDetails(eventId, dataSource);
 const otherEvents = new EventsList(category, dataSource, "#other-events");
 
+
 eventDetails.init();
 otherEvents.renderOtherEvents();
